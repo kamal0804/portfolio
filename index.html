@@ -50,6 +50,104 @@
                 opacity: 0;
                 visibility: hidden;
             }
+            .fade-in {
+        opacity: 0;
+        animation: fadeInAnimation ease 2s;
+        animation-fill-mode: forwards;
+    }
+
+    @keyframes fadeInAnimation {
+        0% {
+            opacity: 0;
+        }
+        100% {
+            opacity: 1;
+        }
+    }
+
+    /* Main sections */
+
+    main {
+        padding: 20px;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
+
+    .firstsection, .secondsection {
+        margin-bottom: 20px;
+        background-color: #fff;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .leftsection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rightsection {
+        width: 100%;
+        text-align: center;
+        margin-top: 20px;
+    }
+
+    .rightsection img {
+        max-width: 100%;
+        height: auto;
+    }
+
+    .vertical {
+        display: flex;
+        margin-bottom: 20px;
+    }
+
+    .vertical img {
+        max-width: 80px;
+        height: auto;
+        margin-right: 10px;
+    }
+
+    .vertical-title {
+        font-weight: bold;
+        margin-bottom: 5px;
+    }
+
+    /* Media queries for responsiveness */
+
+    @media only screen and (max-width: 768px) {
+        .left, .right {
+            display: block;
+            text-align: center;
+            margin: 10px 0;
+        }
+
+        .right {
+            float: none;
+        }
+
+        nav ul {
+            text-align: center;
+        }
+
+        nav ul li {
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .firstsection, .secondsection {
+            padding: 10px;
+        }
+    }
+
+    @media only screen and (max-width: 480px) {
+        .welcome-message {
+            font-size: 1.5em;
+        }
+
+        .vertical img {
+            max-width: 60px;
+        }
+    }
         </style>
 </head>
 
