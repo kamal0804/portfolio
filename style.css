@@ -1,20 +1,22 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 body {
     background-color: rgb(0, 0, 33);
     color: white;
-    font-family: 'poppins', sans-serif;
+    font-family: 'Poppins', sans-serif;
 }
 
 nav {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     height: 80px;
     background-color: rgb(18, 18, 62);
+    padding: 0 20px;
 }
 
 nav ul {
@@ -32,13 +34,6 @@ nav ul li a {
     color: white;
 }
 
-main hr {
-    border: 0;
-    background-color: #9c97f1;
-    height: 1.2px;
-    margin: 60px 84px;
-}
-
 nav ul li a:hover {
     color: rgb(153, 153, 226);
     font-size: 1.1rem;
@@ -48,54 +43,58 @@ nav ul li a:hover {
     font-size: 1.5rem;
 }
 
-.firstsection {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    margin: 140px 0;
+.menu-toggle {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
 }
 
-.firstsection>div {
-    width: 30%;
-    /* background-color: red; */
+.menu-toggle .bar {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 4px;
+    transition: 0.3s;
+}
+
+.firstsection {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 40px 20px;
+    margin: 20px 0;
 }
 
 .leftsection {
-  
-    font-size: 2rem;
-  }
+    font-size: 1.5rem;
+}
 
-  .leftsection .btn {
-  padding: 12px;
-  background-color: #24242c;
-  color: white;
-  border: 2px solid white;
-  border-radius: 6px;
-  font-size: 20px;
-
-
-    
-  }
- .btn.btn1:hover{
-    font-size: 1.1rem;
-
-
- }
- .btn1:hover{
-    font: size 1.1rem ;
-
- }
-  .leftsection .btn1 {
-    padding: 12px;
-    background-color: #1e2167;
+.leftsection .btn, .leftsection .btn1 {
+    padding: 10px 20px;
+    background-color: #24242c;
     color: white;
     border: 2px solid white;
     border-radius: 6px;
-    font-size: 20px;
-  }
-    
+    font-size: 18px;
+    margin: 10px 5px;
+    cursor: pointer;
+}
+
+.leftsection .btn1 {
+    background-color: #1e2167;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+}
+
 .rightsection img {
-    width: 80%;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 20px;
 }
 
 .purple {
@@ -108,79 +107,53 @@ nav ul li a:hover {
 
 #element {
     color: rgb(170, 107, 228);
-
 }
 
 .secondsection {
-    max-width: 80vw;
-    margin: auto;
-    height: 80vh;
-
+    width: 100%;
+    padding: 40px 20px;
+    text-align: center;
 }
 
 .secondsection h1 {
     font-size: 2rem;
+    margin-bottom: 20px;
 }
 
 .secondsection .box {
-    background-color: white;
-    width: 80vw;
-    height: 2px;
-    margin: 56px 0;
-    display:flex;
-
-
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
 }
-.secondsection .vertical{
-    height: 95px;
-    width: 1px;
-    background-color: white;
-    margin: 0 120px;
 
-}
-.image-top{
-    width :23px;
-    position: relative;
-    top: -32px;
-    left: -9px;
-
-
-}
-.vertical-titile{
-    position: relative;
-    top :75px;
-    width: ;
-
-}
-.vertical-desc{
-position: relative;
-top: 80px;
-font-size: 11px;
-color: grey;
-width: 150px;
-
-}
-.vertical-desc:hover{
-   font-size: 0.8rem;  
-}
-/* footer{
-    background-color: #0e0e1a;
-    height: 233px;
-}
-.footer{
-display: flex;
-padding: 23px 123px;
-
-
-} */
-h3{
-    font-size:40px
-
-}
-.footer {
-    background-color: #0e0e1a;;
+.vertical {
+    background-color: rgb(18, 18, 62);
     color: white;
-    padding: 23px 123px;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 150px;
+    text-align: center;
+    margin: 20px 10px;
+}
+
+.image-top {
+    width: 40px;
+}
+
+.vertical-title {
+    font-size: 1.2rem;
+    margin: 10px 0;
+}
+
+.vertical-desc {
+    font-size: 0.9rem;
+    color: grey;
+}
+
+.footer {
+    background-color: #0e0e1a;
+    color: white;
+    padding: 20px;
     text-align: center;
 }
 
@@ -209,6 +182,47 @@ h3{
     text-decoration: none;
 }
 
-.footer-bottom {
-    margin-top: 20px;
+/* Responsive Design */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+        position: absolute;
+        top: 80px;
+        left: -100%;
+        width: 100%;
+        background-color: rgb(18, 18, 62);
+        transition: 0.3s;
+    }
+
+    nav ul.showing {
+        left: 0;
+    }
+
+    .menu-toggle {
+        display: flex;
+    }
+
+    .firstsection {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .leftsection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .rightsection {
+        width: 100%;
+    }
+
+    .secondsection {
+        width: 100%;
+        text-align: center;
+    }
+
+    .secondsection .box {
+        flex-direction: column;
+        align-items: center;
+    }
 }
