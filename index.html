@@ -8,10 +8,8 @@
     <link rel="stylesheet" href="style.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
-        
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
 </head>
 
 <body>
@@ -20,18 +18,23 @@
             <div class="left">Kamal's Portfolio</div>
             <div class="right">
                 <ul>
-                    <li><a href="">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Services</a></li>
-                    <li><a href="">Contact us</a></li>
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#services">Services</a></li>
+                    <li><a href="#contact">Contact us</a></li>
                 </ul>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
             </div>
         </nav>
     </header>
     <main>
-        <section class="firstsection">
-            <div class="leftsection">
+        <section id="home" class="firstsection">
+            <div class="leftsection animate__animated">
                 Hi, My name is <span class="purple">Kamal Kant</span>
                 <div>and I am a passionate</div>
                 <span id="element"></span>
@@ -44,58 +47,48 @@
                     </a>
                 </div>
             </div>
-            <div class="rightsection">
+            <div class="rightsection animate__animated">
                 <img src="file.png" alt="">
             </div>
         </section>
         <hr>
         <section class="secondsection">
             <span class="text-grey">What I have done so far</span>
-            <h1>Work Experience</h1>
+            <h1 class="animate__animated">Work Experience</h1>
             <div class="box">
                 <div class="vertical">
-                    <img class="image-top" src="school.png" alt="">
-                    <div class="vertical-title">High school (2018)</div>
-                    <div class="vertical-desc">Doing my high school from Savitri Public school with aggregate percentage
-                        of 80%
-                    </div>
+                    <img class="image-top animate__animated" src="school.png" alt="">
+                    <div class="vertical-title animate__animated">High school (2018)</div>
+                    <div class="vertical-desc animate__animated">Doing my high school from Savitri Public school with aggregate percentage of 80%</div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="school.png" alt="">
-                    <div class="vertical-title">Equivalent class 12 (2020)</div>
-                    <div class="vertical-desc">Doing my Equivalent class 12 from M.B.D.A.V Senior Secondary school with
-                        aggregate percentage of 85%
-                    </div>
+                    <img class="image-top animate__animated" src="school.png" alt="">
+                    <div class="vertical-title animate__animated">Equivalent class 12 (2020)</div>
+                    <div class="vertical-desc animate__animated">Doing my Equivalent class 12 from M.B.D.A.V Senior Secondary school with aggregate percentage of 85%</div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="HTML LOGO.png" alt="">
-                    <div class="vertical-title">HTML Developer (from 2021)</div>
-                    <div class="vertical-desc">Learning HTML from 2021 and making projects</div>
+                    <img class="image-top animate__animated" src="HTML LOGO.png" alt="">
+                    <div class="vertical-title animate__animated">HTML Developer (from 2021)</div>
+                    <div class="vertical-desc animate__animated">Learning HTML from 2021 and making projects</div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="JS LOGO.png" alt="">
-                    <div class="vertical-title">Learning JAVASCRIPT (2021)</div>
-                    <div class="vertical-desc">Learning JAVASCRIPT from 2021 and solving multiple problems</div>
+                    <img class="image-top animate__animated" src="JS LOGO.png" alt="">
+                    <div class="vertical-title animate__animated">Learning JAVASCRIPT (from 2021)</div>
+                    <div class="vertical-desc animate__animated">Learning JAVASCRIPT from 2021 and solving multiple problems</div>
                 </div>
                 <div class="vertical">
-                    <img class="image-top" src="NODE JS.png" alt="">
-                    <div class="vertical-title">Learning Node.js (2022)</div>
-                    <div class="vertical-desc">Learning Node.js from 2022</div>
+                    <img class="image-top animate__animated" src="NODE JS.png" alt="">
+                    <div class="vertical-title animate__animated">Learning Node.js(from 2022)</div>
+                    <div class="vertical-desc animate__animated">Learning Node.js from 2022</div>
                 </div>
             </div>
         </section>
     </main>
     <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-    <script>
-        document.addEventListener('DOMContentLoaded', function () {
-            var typed = new Typed('#element', {
-                strings: ['Web Developer', 'Problem Solver', 'Traveler', 'Cricket Enthusiast'],
-                typeSpeed: 100,
-            });
-        });
-    </script>
+    <script src="script.js"></script>
+    <script src="app.js"></script>
     <footer class="footer">
-        <h3>Kamal Portfolio</h3>
+        <h3 class="animate__animated">Kamal Portfolio</h3>
         <div class="footer-container">
             <div class="social-links">
                 <a href="https://www.facebook.com/mohitbaghel.bahel/" target="_blank" class="social-icon">
@@ -106,7 +99,7 @@
                 </a>
             </div>
             <div class="contact-info">
-                <p>Contact me at: <a href="mailto:kkbaghel0804@gmail.com">kkbaghel0804@gmail.com</a></p>
+                <p>Contact me at: <a href="mailto:kkbaghel0804@gmail.com" style="color: goldenrod;">kkbaghel0804@gmail.com</a></p>
             </div>
         </div>
     </footer>
